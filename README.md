@@ -8,7 +8,7 @@ Installation
 ----------------
 
 - Download "[Hash.alfredworkflow](https://github.com/BigLuck/alfred2-hash/raw/master/Hash.alfredworkflow)" extension.
-- Double click the downloaded "Crypt.alfredworkflow" file to install.
+- Double click the downloaded "Hash.alfredworkflow" file to install.
 *Alfred 2 is required*
 
 
