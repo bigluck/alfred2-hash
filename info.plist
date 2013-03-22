@@ -39,11 +39,33 @@
 				<string></string>
 			</dict>
 		</array>
+		<key>2908DC18-E638-47E5-AE99-B9D6B88DCDC2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2C70F8B3-AC3B-4405-9CB7-6EECD754E5F5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 		<key>3C182A4A-5CDD-47A7-8419-62AF79D8AFCE</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>2C70F8B3-AC3B-4405-9CB7-6EECD754E5F5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>64B42DF7-43FB-4B49-B48A-22C5DA5D26EC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2908DC18-E638-47E5-AE99-B9D6B88DCDC2</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -148,6 +170,8 @@
 	<string>Luca Bigon</string>
 	<key>description</key>
 	<string>Hash calculator with MD5, SHA1, Base64, htpasswd, whirlpool and crc32 support!</string>
+	<key>disabled</key>
+	<false/>
 	<key>name</key>
 	<string>Hash</string>
 	<key>objects</key>
@@ -195,27 +219,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>output</key>
 				<integer>0</integer>
-				<key>escaping</key>
-				<integer>4</integer>
-				<key>keyword</key>
-				<string>whirlpool</string>
-				<key>script</key>
-				<string>php -f ./e4WorkflowApp.php -- "whirlpool {query}" "XML"</string>
-				<key>subtext</key>
-				<string>Calculate the Whirlpool hash of a string</string>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
 				<key>title</key>
-				<string>Whirlpool</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
+				<string>MD5 hash</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>22DEF110-D260-45F8-B25F-9FDA35C620EB</string>
+			<string>639F170A-1E36-4CD0-9880-361A01AC88EE</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -260,25 +282,42 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>output</key>
+				<key>argumenttype</key>
 				<integer>0</integer>
-				<key>removeextension</key>
-				<false/>
-				<key>sticky</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>keyword</key>
+				<string>whirlpool</string>
+				<key>script</key>
+				<string>php -f ./e4WorkflowApp.php -- "whirlpool {query}" "XML"</string>
+				<key>subtext</key>
+				<string>Calculate the Whirlpool hash of a string</string>
 				<key>title</key>
-				<string>MD5 hash</string>
+				<string>Whirlpool</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>639F170A-1E36-4CD0-9880-361A01AC88EE</string>
+			<string>22DEF110-D260-45F8-B25F-9FDA35C620EB</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<false/>
+				<key>filetypes</key>
+				<array/>
+				<key>name</key>
+				<string>Calculate Base64</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>64B42DF7-43FB-4B49-B48A-22C5DA5D26EC</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -308,6 +347,21 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>script</key>
+				<string>php -f ./e4WorkflowApp.php -- "sha1 {query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>AC9037B0-D236-4D35-965B-F945583AABF1</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
@@ -329,21 +383,6 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>3C182A4A-5CDD-47A7-8419-62AF79D8AFCE</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>escaping</key>
-				<integer>4</integer>
-				<key>script</key>
-				<string>php -f ./e4WorkflowApp.php -- "sha1 {query}"</string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>AC9037B0-D236-4D35-965B-F945583AABF1</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -446,6 +485,21 @@
 			<key>uid</key>
 			<string>B5F00437-7542-4215-B000-E1E2E64E9E40</string>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>script</key>
+				<string>php -f ./e4WorkflowApp.php -- "base64_encode {query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>2908DC18-E638-47E5-AE99-B9D6B88DCDC2</string>
+		</dict>
 	</array>
 	<key>uidata</key>
 	<dict>
@@ -464,10 +518,15 @@
 			<key>ypos</key>
 			<real>610</real>
 		</dict>
+		<key>2908DC18-E638-47E5-AE99-B9D6B88DCDC2</key>
+		<dict>
+			<key>ypos</key>
+			<real>430</real>
+		</dict>
 		<key>2C70F8B3-AC3B-4405-9CB7-6EECD754E5F5</key>
 		<dict>
 			<key>ypos</key>
-			<real>370</real>
+			<real>440</real>
 		</dict>
 		<key>3C182A4A-5CDD-47A7-8419-62AF79D8AFCE</key>
 		<dict>
@@ -478,6 +537,11 @@
 		<dict>
 			<key>ypos</key>
 			<real>70</real>
+		</dict>
+		<key>64B42DF7-43FB-4B49-B48A-22C5DA5D26EC</key>
+		<dict>
+			<key>ypos</key>
+			<real>370</real>
 		</dict>
 		<key>A3BF7D82-EDD4-4721-BF58-6668CB5D4FDB</key>
 		<dict>
