@@ -37,12 +37,12 @@ You can get a hash from a file in 2 ways:
 
 ![File Action Menu](http://f.cl.ly/items/3T2T3M2D3k0h3M0d1L1e/Screen%20Shot%202015-01-06%20at%209.06.12%20AM.png)
 
-* Select the file in Finder, launch Alfred and type oen of the following commands:
+* Select the file in Finder, launch Alfred and type one of the following commands:
 
-- md5f
-- sha1f
-- sha256f
-- sha512f
-- base64f
+  - md5f
+  - sha1f
+  - sha256f
+  - sha512f
+  - base64f
 
 ![Finder Selection](http://f.cl.ly/items/000Z2s3n2q0Z3w0t3Q2x/hash.gif)
