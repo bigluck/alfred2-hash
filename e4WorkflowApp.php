@@ -168,7 +168,7 @@ class e4WorkflowApp
 	public function exportConfig()
 	{
 		$content = json_encode($this->defaults);
-		if (md5($content) == $this->defaultsHash)
+		if (md5($content) === $this->defaultsHash)
 			return false;
 		file_put_contents($this->configPath.'config.json', $content);
 		return true;
