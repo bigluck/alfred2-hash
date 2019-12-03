@@ -1,6 +1,6 @@
 <?php
 
-
+ini_set("display_errors", 0);
 // Library autoloader
 define('ROOT', dirname($_SERVER['SCRIPT_NAME']).'/');
 function __autoload($className)
