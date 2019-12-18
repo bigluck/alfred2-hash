@@ -1,4 +1,5 @@
 {
+	"defaults": [],
 	"app": {
 		"name": "Hash",
 		"id": "net.exit4web.hash",
